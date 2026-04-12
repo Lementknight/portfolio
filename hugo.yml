@@ -1,0 +1,50 @@
+baseURL: https://example.org/
+copyright: "© Caleb Aguirre-Leon"
+defaultContentLanguage: en
+disableKinds:
+  - taxonomy
+enableRobotsTXT: true
+languageCode: en
+timeZone: America/Chicago
+timeout: 120s
+title: Photography Portfolio
+theme: gallery
+
+relativeURLs: true
+canonifyURLs: false
+
+params:
+  defaultTheme: dark
+  description: Photography portfolio by Caleb Aguirre-Leon
+  title: Photography Portfolio
+  author:
+    name: Caleb Aguirre-Leon
+  socialIcons:
+    github: https://github.com/Lementknight
+    flickr: https://flic.kr/ps/46EKnC
+    linkedin: https://www.linkedin.com/in/caleb-aguirre-leon/
+  gallery: {}
+    # boxSpacing: 10
+    # targetRowHeight: 288
+    # targetRowHeightTolerance: 0.25
+
+outputs:
+  home:
+    - HTML
+    - RSS
+  page:
+    - HTML
+  section:
+    - HTML
+
+imaging:
+  quality: 75
+  resampleFilter: CatmullRom
+  exif:
+    disableDate: false
+    disableLatLong: true
+    includeFields: "ImageDescription|Orientation"
+
+services:
+  rss:
+    limit: 100

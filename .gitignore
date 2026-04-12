@@ -1,0 +1,22 @@
+/public/*
+/resources/_gen/*
+/assets/jsconfig.json
+hugo_stats.json
+
+# Executables
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Build lock
+.hugo_build.lock
+
+# macOS
+.DS_Store
+
+# Firebase
+.firebase/*
+.firebaserc
+
+# Claude
+.claude

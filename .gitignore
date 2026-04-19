@@ -20,3 +20,8 @@ hugo.linux
 
 # Claude
 .claude
+
+# Raw Files
+.raws/
+.CR2
+.CR3

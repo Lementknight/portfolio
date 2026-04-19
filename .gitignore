@@ -25,3 +25,7 @@ hugo.linux
 .raws/
 .CR2
 .CR3
+
+
+package-lock.json
+firebase-debug.log

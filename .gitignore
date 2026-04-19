@@ -25,3 +25,6 @@ hugo.linux
 .raws/
 .CR2
 .CR3
+
+
+firebase-debug.log

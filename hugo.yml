@@ -5,7 +5,7 @@ disableKinds:
   - taxonomy
 enableRobotsTXT: true
 languageCode: en
-timeZone: America/Chicago
+timeZone: America/New_York
 timeout: 120s
 title: Photography Portfolio
 theme: gallery

@@ -21,6 +21,7 @@ hugo.linux
 # Claude
 .claude
 
-# local view only
-.raws/*
+# Raw Files
+.raws/
 .CR2
+.CR3

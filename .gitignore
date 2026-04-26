@@ -16,7 +16,6 @@ hugo.linux
 
 # Firebase
 .firebase/*
-.firebaserc
 
 # Claude
 .claude

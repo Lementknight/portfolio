@@ -4,7 +4,11 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "**/*.CR2",
+      "**/*.CR3",
+      "**/*.cr2",
+      "**/*.cr3"
     ]
   }
 }

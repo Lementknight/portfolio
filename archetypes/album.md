@@ -2,7 +2,7 @@
 title: ""
 description: ""
 date: ""
-draft: true
+draft: false
 weight: 0
 params:
   sort_by: Name

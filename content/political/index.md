@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Political"
 description: ""
 date: ""
 draft: false

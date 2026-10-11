@@ -1,0 +1,32 @@
+/* Camera/lens settings shown in the lightbox caption */
+.pswp__dynamic-caption .exif {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem 2rem;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.pswp__dynamic-caption .exif dt {
+  opacity: 0.6;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pswp__dynamic-caption .exif dd {
+  margin: 0;
+}
+
+/* Portrait photos: caption sits beside the image, so stack it in one column */
+.pswp__dynamic-caption--aside .exif {
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+}
+
+/* Mobile overlay: narrower, two columns */
+.pswp__dynamic-caption--mobile .exif {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
+}

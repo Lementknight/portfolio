@@ -1,0 +1,12 @@
+{{- /* Exposure time as seconds fraction: 1/2500, or 2.5 for long exposures */ -}}
+{{- $v := . -}}
+{{- if findRE `^\d+/\d+$` (string $v) -}}
+  {{- $p := split (string $v) "/" -}}
+  {{- $v = div (float (index $p 0)) (float (index $p 1)) -}}
+{{- end -}}
+{{- $v = float $v -}}
+{{- if lt $v 0.4 -}}
+  1/{{ int (math.Round (div 1 $v)) }}
+{{- else -}}
+  {{ div (math.Round (mul $v 10)) 10 }}
+{{- end -}}

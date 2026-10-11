@@ -1,0 +1,8 @@
+{{- /* Rational ("9/5") or plain number to a short decimal: 1.8, 50 */ -}}
+{{- $v := . -}}
+{{- if findRE `^\d+/\d+$` (string $v) -}}
+  {{- $p := split (string $v) "/" -}}
+  {{- $v = div (float (index $p 0)) (float (index $p 1)) -}}
+{{- end -}}
+{{- $r := div (math.Round (mul (float $v) 10)) 10 -}}
+{{- if eq $r (math.Floor $r) }}{{ int $r }}{{ else }}{{ $r }}{{ end -}}

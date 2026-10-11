@@ -4,7 +4,7 @@ defaultContentLanguage: en
 disableKinds:
   - taxonomy
 enableRobotsTXT: true
-languageCode: en
+locale: en
 timeZone: America/New_York
 timeout: 120s
 title: Photography Portfolio
@@ -38,12 +38,18 @@ outputs:
     - HTML
 
 imaging:
-  quality: 75
   resampleFilter: CatmullRom
-  exif:
-    disableDate: false
-    disableLatLong: true
-    includeFields: "ImageDescription|Orientation"
+  jpeg:
+    quality: 75
+  webp:
+    quality: 75
+  avif:
+    quality: 75
+  meta:
+    sources:
+      - exif
+    fields:
+      - "{ImageDescription,Orientation,Make,Model,LensModel,FNumber,ExposureTime,ISO,ISOSpeed,FocalLength,FocalLengthIn35mmFilm}"
 
 services:
   rss:

@@ -36,7 +36,6 @@ jobs:
     env:
       HUGO_VERSION: 0.160.1
       GO_VERSION: 1.26.2
-      NODE_VERSION: 22.22.2
 
     steps:
       - name: Checkout
@@ -51,11 +50,6 @@ jobs:
           go-version: ${{ env.GO_VERSION }}
           cache: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
       - name: Install Hugo
         run: |
           mkdir -p "${HOME}/.local/hugo"
@@ -68,11 +62,6 @@ jobs:
         run: |
           echo "Hugo: $(hugo version)"
           echo "Go: $(go version)"
-          echo "Node.js: $(node --version)"
-
-      - name: Install Node.js dependencies
-        run: |
-          [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
 
       - name: Configure Git
         run: git config core.quotepath false
